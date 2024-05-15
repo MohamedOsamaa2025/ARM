@@ -1,0 +1,64 @@
+/*
+ * main.c
+ *
+ *  Created on: Apr 17, 2024
+ *      Author: Lenovo
+ */
+
+
+#include "../include/STD_TYPES.h"
+#include "../include/BIT_MATH.h"
+
+#include "../include/RCC_interface.h"
+#include "../include/GPIO_interface.h"
+#include "../include/EXTI_interface.h"
+
+void led1(void);
+void led2(void);
+
+
+void main(void)
+{
+	RCC_voidInit();
+
+	RCC_voidEnablePeripheralClock(RCC_AHB, RCC_AHB_GPIOAEN);
+	RCC_voidEnablePeripheralClock(RCC_AHB, RCC_AHB_GPIOBEN);
+
+	MGPIO_voidSetPinMode(GPIO_PORTA, GPIO_PIN1, GPIO_OUTPUT);
+	MGPIO_voidSetPinOutputSpeed(GPIO_PORTA, GPIO_PIN1, GPIO_LOW_SPEED);
+	MGPIO_voidSetPinOutputType(GPIO_PORTA, GPIO_PIN1, GPIO_OUTPUT_PP);
+	MGPIO_voidSetPinMode(GPIO_PORTB, GPIO_PIN0, GPIO_OUTPUT);
+	MGPIO_voidSetPinOutputSpeed(GPIO_PORTB, GPIO_PIN0, GPIO_LOW_SPEED);
+	MGPIO_voidSetPinOutputType(GPIO_PORTB, GPIO_PIN0, GPIO_OUTPUT_PP);
+
+	MGPIO_voidSetPinMode(GPIO_PORTA, GPIO_PIN0, GPIO_INPUT);
+	MGPIO_voidSetPullUpDownResistor(GPIO_PORTA, GPIO_PIN0,GPIO_PULL_UP);
+	MGPIO_voidSetPinMode(GPIO_PORTB, GPIO_PIN1, GPIO_INPUT);
+	MGPIO_voidSetPullUpDownResistor(GPIO_PORTB, GPIO_PIN1,GPIO_PULL_UP);
+
+	RCC_voidEnablePeripheralClock(RCC_APB2, RCC_APB2_SYSCFGEN);
+
+	MEXTI_voidInit();
+
+	MEXTI_voidSetCallBack(MEXTI_EXTI0,&led1);
+	MEXTI_voidSetCallBack(MEXTI_EXTI1,&led2);
+
+	while(1)
+	{
+		asm("NOP");
+	}
+}
+
+void led1(void)
+{
+	static u8 Local_u8LedState=1;
+	MGPIO_voidSetPinValue(GPIO_PORTA, GPIO_PIN1, Local_u8LedState);
+	TOG_BIT(Local_u8LedState,0);
+}
+void led2(void)
+{
+	static u8 Local_u8LedState=1;
+	MGPIO_voidSetPinValue(GPIO_PORTB, GPIO_PIN0, Local_u8LedState);
+	TOG_BIT(Local_u8LedState,0);
+}
+

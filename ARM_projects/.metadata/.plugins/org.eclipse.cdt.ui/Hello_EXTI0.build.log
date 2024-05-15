@@ -1,0 +1,91 @@
+11:47:33 **** Incremental Build of configuration Debug for project Hello_EXTI0 ****
+make all 
+Building file: ../src/EXTI_program.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/EXTI_program.d" -MT"src/EXTI_program.o" -c -o "src/EXTI_program.o" "../src/EXTI_program.c"
+In file included from ../src/EXTI_program.c:14:0:
+../src/EXTI_program.c: In function 'MEXTI_voidInit':
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:89:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->RTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:90:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->FTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:103:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->RTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:104:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->FTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:117:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->RTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:118:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->FTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:131:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->RTSR, EXTI);
+         ^~~~~~~
+../src/../include/BIT_MATH.h:4:42: error: invalid operands to binary << (have 'int' and 'volatile EXTI_t * {aka volatile struct <anonymous> *}')
+ #define  SET_BIT(REG, BIT)    (REG |= (1 << BIT)) //(REG = REG | (1 << BIT))
+                                          ^
+../src/EXTI_program.c:132:9: note: in expansion of macro 'SET_BIT'
+         SET_BIT(EXTI->FTSR, EXTI);
+         ^~~~~~~
+../src/EXTI_program.c: In function 'MEXTI_voidChangePin':
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI4' not handled in switch [-Wswitch]
+     switch(Copy_tInterrupLine)
+     ^~~~~~
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI5' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI6' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI7' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI8' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI9' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI10' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI11' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI12' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI13' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI14' not handled in switch [-Wswitch]
+../src/EXTI_program.c:149:5: warning: enumeration value 'MEXTI_EXTI15' not handled in switch [-Wswitch]
+../src/EXTI_program.c: In function 'MEXTI_voidSetCallBack':
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI2' not handled in switch [-Wswitch]
+     switch(Copy_tInterrupLine)
+     ^~~~~~
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI3' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI4' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI5' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI6' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI7' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI8' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI9' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI10' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI11' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI12' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI13' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI14' not handled in switch [-Wswitch]
+../src/EXTI_program.c:197:5: warning: enumeration value 'MEXTI_EXTI15' not handled in switch [-Wswitch]
+make: *** [src/subdir.mk:35: src/EXTI_program.o] Error 1
+
+11:47:33 Build Finished (took 219ms)
+

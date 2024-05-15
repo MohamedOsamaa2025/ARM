@@ -1,0 +1,11 @@
+21:15:18 **** Incremental Build of configuration Debug for project Hello_STK ****
+make all 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Hello_STK.elf"
+   text	   data	    bss	    dec	    hex	filename
+   7659	    160	    416	   8235	   202b	Hello_STK.elf
+Finished building: Hello_STK.siz
+ 
+
+21:15:19 Build Finished (took 220ms)
+

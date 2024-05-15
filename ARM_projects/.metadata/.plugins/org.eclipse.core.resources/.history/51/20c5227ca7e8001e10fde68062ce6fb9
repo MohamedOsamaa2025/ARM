@@ -1,0 +1,39 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 22, 2024
+ *      Author: Lenovo
+ */
+
+
+
+#include "../include/STD_TYPES.h"
+#include "../include/BIT_MATH.h"
+
+#include "../include/RCC_interface.h"
+#include "../include/GPIO_interface.h"
+#include "../include/STK_interface.h"
+#include "../include/LEDMAT_interface.h"
+
+u8 arr[8]={255,2,4,8,8,4,2,255};
+
+void main(void)
+{
+	RCC_voidInit();
+	RCC_voidEnablePeripheralClock(RCC_AHB,RCC_AHB_GPIOAEN);
+	RCC_voidEnablePeripheralClock(RCC_AHB,RCC_AHB_GPIOBEN);
+
+	MSTK_voidInit();
+
+	HLEDMAT_voidInit();
+
+	//print 1st letter of your name
+	HLED_voidDisplay(arr);
+
+
+	while(1)
+	{
+
+	}
+}
+

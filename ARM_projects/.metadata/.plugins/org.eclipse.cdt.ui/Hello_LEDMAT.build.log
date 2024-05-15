@@ -1,0 +1,159 @@
+07:32:55 **** Incremental Build of configuration Debug for project Hello_LEDMAT ****
+make all 
+Building file: ../src/main.c
+Invoking: Cross ARM GNU C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -DDEBUG -DUSE_FULL_ASSERT -DTRACE -DOS_USE_TRACE_SEMIHOSTING_DEBUG -DSTM32F401xC -DUSE_HAL_DRIVER -DHSE_VALUE=25000000 -I"../include" -I"../system/include" -I"../system/include/cmsis" -I"../system/include/stm32f4-hal" -std=gnu11 -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:51:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr1[0]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:53:23: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+      HLED_voidDisplay(&arr1[1]);
+                       ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:55:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr1[2]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:57:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr1[1]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:59:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr1[0]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:63:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr2[0]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:65:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr2[1]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:67:20: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+   HLED_voidDisplay(&arr2[0]);
+                    ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:71:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[0]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:73:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[1]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:75:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[2]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:77:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[3]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:79:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[4]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:81:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[5]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:83:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[4]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:85:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[3]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:87:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[2]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:89:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[1]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+../src/main.c:91:19: warning: passing argument 1 of 'HLED_voidDisplay' from incompatible pointer type [-Wincompatible-pointer-types]
+  HLED_voidDisplay(&arr3[0]);
+                   ^
+In file included from ../src/main.c:16:0:
+../src/../include/LEDMAT_interface.h:17:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u8 (*)[8] {aka unsigned char (*)[8]}'
+ void HLED_voidDisplay(u8 * Copy_pu8Data);
+      ^~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: Hello_LEDMAT.elf
+Invoking: Cross ARM GNU C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -mfloat-abi=soft -Og -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -ffreestanding -fno-move-loop-invariants -Wall -Wextra  -g3 -T mem.ld -T libs.ld -T sections.ld -nostartfiles -Xlinker --gc-sections -L"../ldscripts" -Wl,-Map,"Hello_LEDMAT.map" --specs=nano.specs -o "Hello_LEDMAT.elf"  ./system/src/stm32f4-hal/stm32f4xx_hal.o ./system/src/stm32f4-hal/stm32f4xx_hal_cortex.o ./system/src/stm32f4-hal/stm32f4xx_hal_dfsdm.o ./system/src/stm32f4-hal/stm32f4xx_hal_flash.o ./system/src/stm32f4-hal/stm32f4xx_hal_gpio.o ./system/src/stm32f4-hal/stm32f4xx_hal_iwdg.o ./system/src/stm32f4-hal/stm32f4xx_hal_pwr.o ./system/src/stm32f4-hal/stm32f4xx_hal_rcc.o  ./system/src/newlib/_cxx.o ./system/src/newlib/_exit.o ./system/src/newlib/_sbrk.o ./system/src/newlib/_startup.o ./system/src/newlib/_syscalls.o ./system/src/newlib/assert.o  ./system/src/diag/Trace.o ./system/src/diag/trace_impl.o  ./system/src/cortexm/_initialize_hardware.o ./system/src/cortexm/_reset_hardware.o ./system/src/cortexm/exception_handlers.o  ./system/src/cmsis/system_stm32f4xx.o ./system/src/cmsis/vectors_stm32f401xc.o  ./src/GPIO_program.o ./src/LEDMAT_program.o ./src/RCC_program.o ./src/STK_program.o ./src/_initialize_hardware.o ./src/main.o ./src/stm32f4xx_hal_msp.o   
+Finished building target: Hello_LEDMAT.elf
+ 
+Invoking: Cross ARM GNU Create Flash Image
+arm-none-eabi-objcopy -O ihex "Hello_LEDMAT.elf"  "Hello_LEDMAT.hex"
+Finished building: Hello_LEDMAT.hex
+ 
+Invoking: Cross ARM GNU Print Size
+arm-none-eabi-size --format=berkeley "Hello_LEDMAT.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8299	    248	    416	   8963	   2303	Hello_LEDMAT.elf
+Finished building: Hello_LEDMAT.siz
+ 
+
+07:32:56 Build Finished (took 767ms)
+
